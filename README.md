@@ -23,3 +23,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+##  捐赠
+
+如果你觉得这个项目帮助到了你，可以帮作者买杯奶茶或者加个鸡腿🍗表示鼓励。
+
+<div>   
+	<img src="./img/wxpay.jpg" width="49%" >
+    <img src="./img/alipay.jpg" width="49%" >
+</div>
+
+
+ </div>
+
+
+
+<!-- #end -->
+
+
+
