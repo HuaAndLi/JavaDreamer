@@ -15,9 +15,17 @@
 
 ## 数据结构与算法
 
-数据结构与算法部分十分重要，不管是大厂的笔试还是面试中都会设计到。
+数据结构与算法部分十分重要，不管是大厂的笔试还是面试中都会涉及到。
 
-[笔记链接](./notebook/algorithm/notebook.md)
+首先建议看书或者选择一个视频，系统的学习一下知识体系，本人选择的是《算法图解》，下面是笔记。
+
+[书籍链接](./notebook/algorithm/book_note/算法图解.pdf)
+
+[笔记链接](./notebook/algorithm/book_note/notebook.md)
+
+
+
+
 
 
 
