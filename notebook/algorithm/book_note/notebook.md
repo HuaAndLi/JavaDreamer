@@ -140,3 +140,77 @@ log(128) = 7
 
 这种数据结构，相比于数组，插入更快，查找稍慢。相比于链表查找较快，插入较慢。
 
+# 第三章 递归
+
+## 代码
+
+**递归倒计时**
+
+```java
+    /**
+     * 递归倒计时
+     *
+     * @param time 开始的倒计时
+     *             输出：time time-1 ... time-n;
+     */
+    static void countDown(int time) {
+        if (time < 1) {
+            return;
+        } else {
+            System.out.println(time);
+            countDown(time - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        countDown(5);// 5 4 3 2 1
+    }
+
+```
+
+**递归阶乘**
+
+```java
+    /**
+     * 递归阶乘
+     *
+     * @param n
+     * @return n!
+     */
+    static int facMul(int n) {
+        if (n <= 1) {
+            return 1;
+        } else {
+            return n * facMul(n - 1);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println(facMul(4));//24
+    }
+
+```
+
+
+
+## 课后作业
+
+**3.1 根据下面的调用栈，你可获得哪些信息？**
+
+<img src="./img/20231120104811.png" style="zoom:50%;" />
+
+greet方法先被调用，name参数出入maggle
+
+great方法中调用了greet2方法，name参数传入maggle
+
+此时greet未完成
+
+正在调用greet2，若greet2中无其他调用方法，greet2调用玩，返回greet方法继续执行。
+
+**3.2 假设你编写了一个递归函数，但不小心导致它没完没了地运行。正如你看到的，对于 每次函数调用，计算机都将为其在栈中分配内存。递归函数没完没了地运行时，将给 栈带来什么影响？**
+
+内存溢出。
+
+
+
+
+
