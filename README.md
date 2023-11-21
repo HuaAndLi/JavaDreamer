@@ -39,7 +39,7 @@
 
 [day01笔记](./notebook/01_javase/day01/index.md)
 
-如下为目录
+目录如下：
 
 简介
 学什么 怎么学
@@ -63,7 +63,11 @@ HelloWorld程序
 IDEA
 注释
 
+## day02
 
+[day02笔记](./notebook/01_javase/day02/index.md)
+
+目录如下：
 
 
 
