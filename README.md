@@ -104,15 +104,39 @@ if语句
 
 
 
+## day04
 
+[day04笔记](./notebook/01_javase/day04/index.md)
 
+目录如下：
 
+简介
+分支语句
+switchi语句
+循环语句
+for语句
+while语句
+do whilei语句
+break和continue
+Random随机数
+课后作业
 
+## day05
 
+[day05笔记](./notebook/01_javase/day05/index.md)
 
+目录如下：
 
+简介
+数组
+二维数组
+课后作业
 
+## day06
 
+[day06笔记](./notebook/01_javase/day06/index.md)
+
+目录如下：
 
 
 
