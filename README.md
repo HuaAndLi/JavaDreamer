@@ -140,9 +140,15 @@ Random随机数
 
 方法
 
+## day07
 
+[day07笔记](./notebook/01_javase/day07/index.md)
 
+目录如下：
 
+简介
+方法的参数传递
+课后作业
 
 
 
