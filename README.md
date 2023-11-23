@@ -150,6 +150,22 @@ Random随机数
 方法的参数传递
 课后作业
 
+## day08
+
+[day08笔记](./notebook/01_javase/day08/index.md)
+
+目录如下：
+
+
+
+
+
+# Idea好用的插件推荐
+
+- ptg : 根据class已有的属性，快速生成JavaBean
+
+
+
 
 
 
