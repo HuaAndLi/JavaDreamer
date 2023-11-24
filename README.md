@@ -193,15 +193,30 @@ List
 
 ## day01
 
-[day09笔记](./notebook/02_oop/day01/index.md) 
+[day01笔记](./notebook/02_oop/day01/index.md) 
+
+目录如下：
+
+简介
+static:关键字
+继承
 
 
 
+## day02
 
+[day02笔记](./notebook/02_oop/day02/index.md) 
 
+目录如下：
 
-
-
+简介
+包
+权限修饰符
+final关键字
+常量
+枚举
+抽象类
+接口
 
 
 
