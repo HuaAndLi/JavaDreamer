@@ -234,6 +234,31 @@ String Builder
 System
 BigDecimal
 
+## day04
+
+[day04笔记](./notebook/02_oop/day04/index.md) 
+
+目录如下：
+
+简介
+日期与时间
+Date
+SimpleDateFormat
+Calendar
+JDK8新增日期类
+包装类
+正则表达式
+Arrays工具类
+Lambda表达式
+
+## day05
+
+[day05笔记](./notebook/02_oop/day05/index.md) 
+
+目录如下：
+
+
+
 
 
 
