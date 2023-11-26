@@ -47,7 +47,7 @@
 
 网站链接: [动态规划知识点题库 - 力扣（LeetCode）](https://leetcode.cn/tag/dynamic-programming/problemset/?difficulty=Easy&premiumOnly=false)
 
-笔记：[动态规划LeetCode](.notebook\algorithm\study_module\dynamic-programming-leetcodeindex.md)
+笔记：[动态规划LeetCode](./notebook/algorithm/study_module/dynamic-programming-leetcode/index.md)
 
 
 
