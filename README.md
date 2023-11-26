@@ -19,6 +19,8 @@
 
 # 数据结构与算法
 
+## 构建系统知识架构
+
 数据结构与算法部分十分重要，不管是大厂的笔试还是面试中都会涉及到。
 
 首先建议看书或者选择一个视频，系统的学习一下知识体系，本人选择的是《算法图解》，下面是笔记。
@@ -26,6 +28,48 @@
 [书籍链接](./notebook/algorithm/book_note/算法图解.pdf)
 
 [笔记链接](./notebook/algorithm/book_note/notebook.md)
+
+## 实践网站
+
+系统的学习好之后，就要去实践了。推荐如下两个网站。
+
+[力扣（LeetCode）官网 - 全球极客挚爱的技术成长平台](https://leetcode.cn/)
+
+[牛客网 - 找工作神器|笔试题库|面试经验|实习招聘内推，求职就业一站解决_牛客网 (nowcoder.com)](https://www.nowcoder.com/)
+
+## 分模块练习
+
+由于本人时间较充分，可以按模块刷题。时间紧迫要有所取舍。
+
+### 动态规划
+
+由于动态规划为本人弱项，所以重点刷
+
+网站链接: [动态规划知识点题库 - 力扣（LeetCode）](https://leetcode.cn/tag/dynamic-programming/problemset/?difficulty=Easy&premiumOnly=false)
+
+笔记：[动态规划LeetCode](.notebook\algorithm\study_module\dynamic-programming-leetcodeindex.md)
+
+
+
+
+
+
+
+## 热题
+
+时间紧迫可以选择先刷比较重要的题目。
+
+
+
+## 随机刷题
+
+由于笔试时，随机抽题，也不会告诉你在属于哪个模块，使用什么相关算法，所以模拟考试非常重要，要自己学会解决问题。
+
+
+
+
+
+
 
 
 
