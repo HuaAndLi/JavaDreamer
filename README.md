@@ -263,7 +263,24 @@ Collection
 List
 泛型
 
+## day06
 
+[day06笔记](./notebook/02_oop/day06/index.md) 
+
+目录如下：
+
+简介
+Set
+Collections工具类
+Map
+
+
+
+## day07
+
+[day07笔记](./notebook/02_oop/day07/index.md) 
+
+目录如下：
 
 
 
