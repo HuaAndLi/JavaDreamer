@@ -292,6 +292,264 @@ public int maxProfit(int[] prices) {
 
 
 
+## [338. 比特位计数](https://leetcode.cn/problems/counting-bits/)
+
+### 问题
+
+给你一个整数 `n` ，对于 `0 <= i <= n` 中的每个 `i` ，计算其二进制表示中 **`1` 的个数** ，返回一个长度为 `n + 1` 的数组 `ans` 作为答案。
+
+ 
+
+**示例 1：**
+
+```
+输入：n = 2
+输出：[0,1,1]
+解释：
+0 --> 0
+1 --> 1
+2 --> 10
+```
+
+**示例 2：**
+
+```
+输入：n = 5
+输出：[0,1,1,2,1,2]
+解释：
+0 --> 0
+1 --> 1
+2 --> 10
+3 --> 11
+4 --> 100
+5 --> 101
+```
+
+ 
+
+**提示：**
+
+- `0 <= n <= 105`
+
+ 
+
+**进阶：**
+
+- 很容易就能实现时间复杂度为 `O(n log n)` 的解决方案，你可以在线性时间复杂度 `O(n)` 内用一趟扫描解决此问题吗？
+- 你能不使用任何内置函数解决此问题吗？（如，C++ 中的 `__builtin_popcount` ）
+
+
+
+### 答案
+
+**思路**
+
+这题解法两种，一直接调用Java自带的Integer.bitCount()。
+
+二使用动态规划思想。
+
+**代码实现**
+
+直接调用Integer.bitCount()
+
+```java
+class Solution {
+    public int[] countBits(int n) {
+        int[] re_arr = new int[n + 1];
+        for (int i = 0; i <= n; i++) {
+            re_arr[i] = Integer.bitCount(i);
+        }
+
+        return re_arr;
+    }
+}
+```
+
+自己实现bitCount()方法
+
+```java
+public static int myBitCount(int x) {
+        int count = 0;
+        while (x > 0) {
+            x &= (x - 1);//去掉一个最低位
+            count++;
+        }
+        return count;
+    }
+```
+
+动态规划
+
+```java
+public static int[] countBits(int n) {
+        int[] re_arr = new int[n + 1];
+        re_arr[0] = 0;//初始一个个值，可以不写，默认为0，防止意外
+        int maxBit = 0;//最大的2^n；
+        for (int i = 1; i <= n; i++) {
+            if ((i & (i - 1)) == 0) {
+                maxBit = i;//记录
+            }
+            re_arr[i] = re_arr[i - maxBit] + 1;//减去当前最大bit的个数+1个最大bit
+        }
+
+        return re_arr;
+    }
+```
+
+
+
+## [392. 判断子序列](https://leetcode.cn/problems/is-subsequence/)
+
+### 问题
+
+给定字符串 **s** 和 **t** ，判断 **s** 是否为 **t** 的子序列。
+
+字符串的一个子序列是原始字符串删除一些（也可以不删除）字符而不改变剩余字符相对位置形成的新字符串。（例如，`"ace"`是`"abcde"`的一个子序列，而`"aec"`不是）。
+
+**进阶：**
+
+如果有大量输入的 S，称作 S1, S2, ... , Sk 其中 k >= 10亿，你需要依次检查它们是否为 T 的子序列。在这种情况下，你会怎样改变代码？
+
+**致谢：**
+
+特别感谢 [@pbrother ](https://leetcode.com/pbrother/)添加此问题并且创建所有测试用例。
+
+ 
+
+**示例 1：**
+
+```
+输入：s = "abc", t = "ahbgdc"
+输出：true
+```
+
+**示例 2：**
+
+```
+输入：s = "axc", t = "ahbgdc"
+输出：false
+```
+
+ 
+
+**提示：**
+
+- `0 <= s.length <= 100`
+- `0 <= t.length <= 10^4`
+- 两个字符串都只由小写字符组成。
+
+
+
+### 答案
+
+**思路**
+
+我没有太看出来是动态规划，双指针遇到相同的往后移动，最后如果s超过末尾则true，反之false
+
+**代码实现**
+
+双指针
+
+```java
+public boolean isSubsequence(String s, String t) {
+        int s_index = 0, t_index = 0, s_n = s.length(), t_n = t.length();
+        while (s_index < s_n && t_index < t_n) {//都要没有到头
+            if (s.charAt(s_index) == t.charAt(t_index)) {//如果相同子串就后移
+                s_index++;
+            }
+            t_index++;//每次都要后移
+        }
+
+        return s_index == s_n;//如果字串到头就符合
+    }
+```
+
+个人感觉动态规划也不怎么简单，有兴趣可以去研究一下。
+
+
+
+## [509. 斐波那契数](https://leetcode.cn/problems/fibonacci-number/)
+
+### 问题
+
+**斐波那契数** （通常用 `F(n)` 表示）形成的序列称为 **斐波那契数列** 。该数列由 `0` 和 `1` 开始，后面的每一项数字都是前面两项数字的和。也就是：
+
+```
+F(0) = 0，F(1) = 1
+F(n) = F(n - 1) + F(n - 2)，其中 n > 1
+```
+
+给定 `n` ，请计算 `F(n)` 。
+
+ 
+
+**示例 1：**
+
+```
+输入：n = 2
+输出：1
+解释：F(2) = F(1) + F(0) = 1 + 0 = 1
+```
+
+**示例 2：**
+
+```
+输入：n = 3
+输出：2
+解释：F(3) = F(2) + F(1) = 1 + 1 = 2
+```
+
+**示例 3：**
+
+```
+输入：n = 4
+输出：3
+解释：F(4) = F(3) + F(2) = 2 + 1 = 3
+```
+
+ 
+
+**提示：**
+
+- `0 <= n <= 30`
+
+### 答案
+
+**思路**
+
+两个数记录前两个，后面加了之后，依次往前面两个换。
+
+**代码实现**
+
+```java
+   public static int fib(int n) {
+        if (n <= 0) {//<=0,默认为0
+            return 0;
+        }
+        if (n == 1) {//==1，为1
+            return 1;
+        }
+        int a = 0;
+        int b = 1;
+        for (int i = 1; i < n; i++) {
+            int temp = a + b;//累计前两个
+            a = b;//往前换值
+            b = temp;
+        }
+        return b;
+    }
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## template
