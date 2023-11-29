@@ -430,11 +430,33 @@ XPath
 
 
 
+# JavaWeb
+
+MySQL部分，有空可以把代码的空出来看注释练习。
+
+## day1
+
+[day1笔记](./notebook/03_javaweb/day01/index.md) 
+
+目录如下
+
+简介
+MySQL基础
+安装
+登录与退出MySQL
+DDL操作数据库和表
+DML数据的增删攻
+查询数据
+
+
+
+# Spring等框架
 
 
 
 
 
+# 分布式微服务等框架
 
 
 
