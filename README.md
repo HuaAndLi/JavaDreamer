@@ -448,6 +448,22 @@ DDL操作数据库和表
 DML数据的增删攻
 查询数据
 
+## day2
+
+[day2笔记](./notebook/03_javaweb/day02/index.md) 
+
+目录如下
+
+简介
+MySQL高级
+约束
+事务
+多表查询
+
+
+
+
+
 
 
 # Spring等框架
