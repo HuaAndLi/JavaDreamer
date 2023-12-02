@@ -1411,7 +1411,253 @@ public int[] countBits(int n) {
 
 
 
+# 中等
 
+## [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+
+### 问题
+
+给你一个字符串 `s`，找到 `s` 中最长的回文子串。
+
+如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。
+
+ 
+
+**示例 1：**
+
+```
+输入：s = "babad"
+输出："bab"
+解释："aba" 同样是符合题意的答案。
+```
+
+**示例 2：**
+
+```
+输入：s = "cbbd"
+输出："bb"
+```
+
+ 
+
+**提示：**
+
+- `1 <= s.length <= 1000`
+- `s` 仅由数字和英文字母组成
+
+### 答案
+
+**思路**
+
+看官方解析，中等难度已经有些困难了。。。冲
+
+**代码实现**
+
+```java
+    public String longestPalindrome(String s) {
+        if (s.length() <= 1) {//长度小于1默认为回文
+            return s;
+        }
+        int n = s.length();
+        boolean[][] dp = new boolean[n][n];//i->j是不是回文串，i<=j
+        for (int i = 0; i < n; i++) {//i->i是回文
+            dp[i][i] = true;
+        }
+        int begin = 0;//默认从0开始
+        int maxLen = 1;//默认1为最大长度
+        for (int i = 0; i < n - 1; i++) {//判断长度为2的是否为回文数
+            if (s.charAt(i) == s.charAt(i + 1)) {
+                dp[i][i + 1] = true;
+                begin = i;
+                maxLen = 2;
+            }
+        }
+
+        for (int L = 2; L < n; L++) {//当前子字串长度 1+L  例如0->2 长度为3
+            for (int i = 0; i < n - L; i++) { //i表示头
+                //dp[i + 1][i + L - 1] 头和尾缩减1是否为回文
+                //s.charAt(i) == s.charAt(i + L) 头和尾是否相同
+                if (dp[i + 1][i + L - 1] && s.charAt(i) == s.charAt(i + L)) {
+                    dp[i][i + L] = true;//满足以上两条件则当前也是回文
+                    if (L + 1 > maxLen) {//！！长度一定记得L+1
+                        maxLen = L + 1;
+                        begin = i;
+                    }
+                }
+            }
+        }
+        //截取字符串
+        return s.substring(begin, begin + maxLen);
+    }
+```
+
+
+
+
+
+## [22. 括号生成-待优化-回溯法！！！！](https://leetcode.cn/problems/generate-parentheses/)
+
+### 问题
+
+数字 `n` 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 **有效的** 括号组合。
+
+ 
+
+**示例 1：**
+
+```
+输入：n = 3
+输出：["((()))","(()())","(())()","()(())","()()()"]
+```
+
+**示例 2：**
+
+```
+输入：n = 1
+输出：["()"]
+```
+
+ 
+
+**提示：**
+
+- `1 <= n <= 8`
+
+### 答案
+
+**思路**
+
+使用set去重，运行时间很长代替待优化。
+
+**代码实现**
+
+```java
+    public List<String> generateParenthesis(int n) {
+        Set<String> set = new HashSet<>();
+        set.add("()");
+        for (int i = 1; i < n; i++) {
+            Set<String> setTemp = new HashSet<>();
+            set.stream().forEach(item -> {
+                for (int j = 0; j <= item.length(); j++) {//每次把()加入中间
+                    setTemp.add(item.substring(0,j)+"()"+item.substring(j,item.length()));
+                }
+            });
+            set = setTemp;
+        }
+        return set.stream().toList();
+    }
+```
+
+
+
+## [45. 跳跃游戏 II](https://leetcode.cn/problems/jump-game-ii/)
+
+### 问题
+
+给定一个长度为 `n` 的 **0 索引**整数数组 `nums`。初始位置为 `nums[0]`。
+
+每个元素 `nums[i]` 表示从索引 `i` 向前跳转的最大长度。换句话说，如果你在 `nums[i]` 处，你可以跳转到任意 `nums[i + j]` 处:
+
+- `0 <= j <= nums[i]` 
+- `i + j < n`
+
+返回到达 `nums[n - 1]` 的最小跳跃次数。生成的测试用例可以到达 `nums[n - 1]`。
+
+ 
+
+**示例 1:**
+
+```
+输入: nums = [2,3,1,1,4]
+输出: 2
+解释: 跳到最后一个位置的最小跳跃数是 2。
+     从下标为 0 跳到下标为 1 的位置，跳 1 步，然后跳 3 步到达数组的最后一个位置。
+```
+
+**示例 2:**
+
+```
+输入: nums = [2,3,0,1,4]
+输出: 2
+```
+
+ 
+
+**提示:**
+
+- `1 <= nums.length <= 104`
+- `0 <= nums[i] <= 1000`
+- 题目保证可以到达 `nums[n-1]`
+
+### 答案
+
+**思路**
+
+方法一，自己想的，每经过一个格子则更新里面的最小次数。
+
+方法二，官方解析，正向查找可到达的最大位置
+
+**代码实现**
+
+方法一：
+
+```java
+    public int jump(int[] nums) {
+        int[] cost = new int[nums.length];//次数
+        for (int i = 1; i < nums.length; i++) {
+            cost[i] = nums.length;//设置最大跳数。
+        }
+        for (int i = 0; i < nums.length - 1; i++) {//遍历除了最后一个
+            for (int j = i + 1; j <= i + nums[i] && j < nums.length; j++) {//当前的后面一个 到 可以跳的最后一个
+                cost[j] = Math.min(cost[j], cost[i]+1);//更新最小值
+                if (j >= nums.length) {//如果到了最后一个，则找到最小的
+                    return cost[nums.length - 1];
+                }
+            }
+        }
+        return cost[nums.length - 1];
+    }
+```
+
+方法二
+
+```java
+    public int jump(int[] nums) {
+        int end = 0;//每一轮的最后一个
+        int maxPosition = 0;//当前最大可以跳到的位置
+        int step = 0;//步数
+        for (int i = 0; i < nums.length - 1; i++) {//最后一个不需要遍历
+            maxPosition = Math.max(maxPosition, i + nums[i]);
+            if (i == end) {
+                end = maxPosition;
+                step++;
+            }
+        }
+        return step;
+    }
+```
+
+
+
+
+
+
+
+
+
+## template
+
+### 问题
+
+
+
+### 答案
+
+**思路**
+
+
+
+**代码实现**
 
 
 
