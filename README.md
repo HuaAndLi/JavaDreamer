@@ -432,7 +432,7 @@ XPath
 
 # JavaWeb
 
-MySQL部分，有空可以把代码的空出来看注释练习。
+MySQL部分，有空可以把代码的空出来看注释练习。这部分有些内容源码过多，后面只列出知识点目录，需要源码的同学可以私聊我。
 
 ## day1
 
@@ -459,6 +459,31 @@ MySQL高级
 约束
 事务
 多表查询
+
+## day3
+
+[day3笔记](./notebook/03_javaweb/day03/index.md) 
+
+目录如下
+
+简介
+JDBC
+JDBC体验
+数据库连接池
+
+## day4
+
+[day4笔记](./notebook/03_javaweb/day04/index.md) 
+
+目录如下
+
+简介
+Maven
+MyBatis入门
+
+
+
+
 
 
 
@@ -500,6 +525,10 @@ bean的生命周期
 # Idea好用的插件推荐
 
 - ptg : 根据class已有的属性，快速生成JavaBean
+
+- MybatisX : 快速跳转对应的Mapper接口和xml文件
+
+
 
 
 
