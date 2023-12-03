@@ -434,11 +434,11 @@ XPath
 
 MySQL部分，有空可以把代码的空出来看注释练习。这部分有些内容源码过多，后面只列出知识点目录，需要源码的同学可以私聊我。
 
-## day1
+## day01
 
-[day1笔记](./notebook/03_Javaweb/day01/index.md) 
+[day01笔记](./notebook/03_Javaweb/day01/index.md) 
 
-目录如下
+目录如下:
 
 简介
 MySQL基础
@@ -448,11 +448,11 @@ DDL操作数据库和表
 DML数据的增删攻
 查询数据
 
-## day2
+## day02
 
-[day2笔记](./notebook/03_Javaweb/day02/index.md) 
+[day02笔记](./notebook/03_Javaweb/day02/index.md) 
 
-目录如下
+目录如下:
 
 简介
 MySQL高级
@@ -460,28 +460,53 @@ MySQL高级
 事务
 多表查询
 
-## day3
+## day03
 
-[day3笔记](./notebook/03_Javaweb/day03/index.md) 
+[day03笔记](./notebook/03_Javaweb/day03/index.md) 
 
-目录如下
+目录如下:
 
 简介
 JDBC
 JDBC体验
 数据库连接池
 
-## day4
+## day04
 
-[day4笔记](./notebook/03_Javaweb/day04/index.md) 
+[day04笔记](./notebook/03_Javaweb/day04/index.md) 
 
-目录如下
+目录如下：
 
 简介
 Maven
 MyBatis入门
 
+## day05
 
+[day05笔记](./notebook/03_Javaweb/day05/index.md) 
+
+目录如下：
+
+简介
+MyBatis:进阶
+增删改查MyBatis
+获取新增记录的主键值
+方法多个参数
+resultMap输出映射
+动态sq
+
+## day06
+
+[day06笔记](./notebook/03_Javaweb/day06/index.md) 
+
+目录如下：
+
+简介
+MyBatisi高级
+多表关联查询
+级联查询懒加载
+MyBatis缓存
+MyBatisi注解开发
 
 
 
@@ -493,9 +518,9 @@ MyBatis入门
 
 # Spring等框架
 
-## day1
+## day01
 
-[day1笔记](./notebook/04_Javaframework/day01/index.md) 
+[day01笔记](./notebook/04_Javaframework/day01/index.md) 
 
 目录如下
 
