@@ -1639,6 +1639,382 @@ public int[] countBits(int n) {
 
 
 
+## [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
+
+### 问题
+
+给你一个整数数组 `nums` ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+
+**子数组** 是数组中的一个连续部分。
+
+ 
+
+**示例 1：**
+
+```
+输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
+输出：6
+解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
+```
+
+**示例 2：**
+
+```
+输入：nums = [1]
+输出：1
+```
+
+**示例 3：**
+
+```
+输入：nums = [5,4,-1,7,8]
+输出：23
+```
+
+ 
+
+**提示：**
+
+- `1 <= nums.length <= 105`
+- `-104 <= nums[i] <= 104`
+
+ 
+
+**进阶：**如果你已经实现复杂度为 `O(n)` 的解法，尝试使用更为精妙的 **分治法** 求解。
+
+### 答案
+
+**思路**
+
+dp[i] = max(dp[i-1]+nums[i],nums[i])
+
+**代码实现**
+
+```java
+    public int maxSubArray(int[] nums) {
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        int preMax = nums[0];
+        int AllMax = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            preMax = Math.max(preMax + nums[i], nums[i]);
+            if (preMax > AllMax) {
+                AllMax = preMax;
+            }
+        }
+
+        return AllMax;
+    }
+```
+
+
+
+
+
+## [55. 跳跃游戏](https://leetcode.cn/problems/jump-game/)
+
+### 问题
+
+给你一个非负整数数组 `nums` ，你最初位于数组的 **第一个下标** 。数组中的每个元素代表你在该位置可以跳跃的最大长度。
+
+判断你是否能够到达最后一个下标，如果可以，返回 `true` ；否则，返回 `false` 。
+
+ 
+
+**示例 1：**
+
+```
+输入：nums = [2,3,1,1,4]
+输出：true
+解释：可以先跳 1 步，从下标 0 到达下标 1, 然后再从下标 1 跳 3 步到达最后一个下标。
+```
+
+**示例 2：**
+
+```
+输入：nums = [3,2,1,0,4]
+输出：false
+解释：无论怎样，总会到达下标为 3 的位置。但该下标的最大跳跃长度是 0 ， 所以永远不可能到达最后一个下标。
+```
+
+ 
+
+**提示：**
+
+- `1 <= nums.length <= 104`
+- `0 <= nums[i] <= 105`
+
+### 答案
+
+**思路**
+
+和45.跳跃游戏II思路一样。记得考虑边界情况
+
+**代码实现**
+
+```java
+    public boolean canJump(int[] nums) {
+        int curPosition = 0;//当前能到的最大位置
+        for (int i = 0; i <= curPosition && i < nums.length; i++) {//每次只能跳到最大的位置
+            if (i + nums[i] > curPosition) {//如果当前最远位置大
+                curPosition = i + nums[i];//更新
+                if (curPosition >= nums.length - 1) {//如果到了最后一个退出
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+```
+
+
+
+## [62. 不同路径](https://leetcode.cn/problems/unique-paths/)
+
+### 问题
+
+一个机器人位于一个 `m x n` 网格的左上角 （起始点在下图中标记为 “Start” ）。
+
+机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。
+
+问总共有多少条不同的路径？
+
+ 
+
+**示例 1：**
+
+![img](https://pic.leetcode.cn/1697422740-adxmsI-image.png)
+
+```
+输入：m = 3, n = 7
+输出：28
+```
+
+**示例 2：**
+
+```
+输入：m = 3, n = 2
+输出：3
+解释：
+从左上角开始，总共有 3 条路径可以到达右下角。
+1. 向右 -> 向下 -> 向下
+2. 向下 -> 向下 -> 向右
+3. 向下 -> 向右 -> 向下
+```
+
+**示例 3：**
+
+```
+输入：m = 7, n = 3
+输出：28
+```
+
+**示例 4：**
+
+```
+输入：m = 3, n = 3
+输出：6
+```
+
+ 
+
+**提示：**
+
+- `1 <= m, n <= 100`
+- 题目数据保证答案小于等于 `2 * 109`
+
+### 答案
+
+**思路**
+
+​	没有想出来，参考leetcode官方解释
+
+**代码实现**
+
+```java
+    public int uniquePaths(int m, int n) {
+        if (m == 1 || n == 1) return 1;
+        int nmax, nmin;//因为m = 3, n=2;n=3,m=2  互换位置结果不变。
+        if (m > n) {
+            nmax = m;
+            nmin = n;
+        } else {
+            nmax = n;
+            nmin = m;
+        }
+	//这里有个错误，应该选择小的nmin，可以省空间，自己修改一下。
+        int[] dp = new int[nmax];
+        for (int i = 0; i < nmax; i++) {//初试化第一行
+            dp[i] = 1;
+        }
+        for (int i = 1; i < nmin; i++) {//从第二行开始
+            for (int j = 1; j < nmax; j++) {//遍历列
+                dp[j] = dp[j - 1] + dp[j];//画个图就可以理解了，dp[j-1]表示左边的，dp[j] 因为还是记录上一行的，直接加
+            }
+        }
+        return dp[nmax-1];
+    }
+```
+
+
+
+## [63. 不同路径 II](https://leetcode.cn/problems/unique-paths-ii/)
+
+### 问题
+
+一个机器人位于一个 `m x n` 网格的左上角 （起始点在下图中标记为 “Start” ）。
+
+机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。
+
+现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
+
+网格中的障碍物和空位置分别用 `1` 和 `0` 来表示。
+
+ 
+
+**示例 1：**
+
+![img](https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg)
+
+```
+输入：obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
+输出：2
+解释：3x3 网格的正中间有一个障碍物。
+从左上角到右下角一共有 2 条不同的路径：
+1. 向右 -> 向右 -> 向下 -> 向下
+2. 向下 -> 向下 -> 向右 -> 向右
+```
+
+**示例 2：**
+
+![img](https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg)
+
+```
+输入：obstacleGrid = [[0,1],[0,0]]
+输出：1
+```
+
+ 
+
+**提示：**
+
+- `m == obstacleGrid.length`
+- `n == obstacleGrid[i].length`
+- `1 <= m, n <= 100`
+- `obstacleGrid[i][j]` 为 `0` 或 `1`
+
+### 答案
+
+**思路**
+
+和62.不同路径一样，只不过需要把有阻挡的位置清零。
+
+**代码实现**
+
+```java
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+//        if (obstacleGrid==null||obstacleGrid.length==0) return 0;//题目已经限制了不需要判断
+        int m = obstacleGrid.length;
+        int n = obstacleGrid[0].length;
+
+        int[] dp = new int[n];//记录列
+        if (obstacleGrid[0][0] != 1) {//判断第一个位置有没有占位
+            dp[0] = 1;
+        } else {
+            return 0;//如果第一个就占，肯定过不去
+        }
+        for (int i = 0; i < m; i++) {//从第1行开始
+            for (int j = 0; j < n; j++) {//遍历列
+                if (j != 0) {//第一个左边没有要特殊处理
+                    //画个图就可以理解了，dp[j-1]表示左边的，dp[j] 因为还是记录上一行的，直接加
+                    //如果被挡住了，直接直接为0
+                    dp[j] = obstacleGrid[i][j] == 0 ? dp[j - 1] + dp[j] : 0;
+                } else {
+                    dp[j] = obstacleGrid[i][j] == 0 ? dp[j] : 0;
+                }
+            }
+        }
+        return dp[n - 1];
+    }
+```
+
+
+
+## [64. 最小路径和](https://leetcode.cn/problems/minimum-path-sum/)
+
+### 问题
+
+给定一个包含非负整数的 `*m* x *n*` 网格 `grid` ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
+
+**说明：**每次只能向下或者向右移动一步。
+
+ 
+
+**示例 1：**
+
+![img](https://assets.leetcode.com/uploads/2020/11/05/minpath.jpg)
+
+```
+输入：grid = [[1,3,1],[1,5,1],[4,2,1]]
+输出：7
+解释：因为路径 1→3→1→1→1 的总和最小。
+```
+
+**示例 2：**
+
+```
+输入：grid = [[1,2,3],[4,5,6]]
+输出：12
+```
+
+ 
+
+**提示：**
+
+- `m == grid.length`
+- `n == grid[i].length`
+- `1 <= m, n <= 200`
+- `0 <= grid[i][j] <= 200`
+
+### 答案
+
+**思路**
+
+同上一题思路，只不过，把路径和相加，先判断谁小，再加当前的值。
+
+**代码实现**
+
+```java
+    public int minPathSum(int[][] grid) {
+        int m = grid.length;//行
+        int n = grid[0].length;//列
+        int[] dp = new int[n];
+        int sum = 0;
+        for (int i = 0; i < n; i++) {//初始化第一行的费用
+            sum += grid[0][i];//第一行第i列的费用。
+            dp[i] = sum;
+        }
+        for (int i = 1; i < m; i++) {//从第二开始
+            for (int j = 0; j < n; j++) {
+                if (j == 0) {//下标为0 特殊处理
+                    dp[j] = dp[j] + grid[i][j];
+                } else {
+                    dp[j] = Math.min(dp[j], dp[j - 1]) + grid[i][j];
+                }
+            }
+        }
+        return dp[n - 1];
+    }
+```
+
+
+
+
+
+
+
 
 
 

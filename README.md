@@ -1,12 +1,12 @@
 # JavaDreamer
 
-重生之我必去大厂java开发。主线任务进入大厂java开发。
+重生之我必去大厂Java开发。主线任务进入大厂Java开发。
 
 @ author ：developer_zxh
 
 [GitHub](https://github.com/HuaAndLi/JavaDreamer) | [Gitee](暂无)
 
-> - 本项目记录了本人从中国科学院大学硕士研究生开始，如何进入大厂 java 开发岗位的学习记录（目前在校未求职，加入后此状态再更新）。有兴趣的小伙伴可以与我一起维护。
+> - 本项目记录了本人从中国科学院大学硕士研究生开始，如何进入大厂 Java 开发岗位的学习记录（目前在校未求职，加入后此状态再更新）。有兴趣的小伙伴可以与我一起维护。
 > - **求个Star**：如果觉得 JavaDreamer 的内容对你有帮助的话，还请点个免费的 Star，这是对我最大的鼓励，感谢各位一起同行，共勉！Github 地址：[https://github.com/HuaAndLi/JavaDreamer](https://github.com/HuaAndLi/JavaDreamer) 。
 > - 由于重生之前未进入过大厂，此笔记均只代表个人观点，如有错误，欢迎指正。
 > - 联系方式：qq：1713565983,  加qq，或者qq邮箱都可以。
@@ -17,7 +17,7 @@
 
 各科直接没有必要的先后顺序。可以凭借自己的兴趣随意组合。
 
-
+Java基础开始按照顺序学习。
 
 # 数据结构与算法
 
@@ -75,9 +75,9 @@
 
 
 
-# java基础
+# Java基础
 
-大厂java开发，不可能只考虑笔试面试，没有代码能力，所以代码基础与实践相当重要，这里建议找一个课程系统学一下。
+大厂Java开发，不可能只考虑笔试面试，没有代码能力，所以代码基础与实践相当重要，这里建议找一个课程系统学一下。
 
 下面部分内容由于之前博客已经记录，所以直接给出了博客链接。
 
@@ -85,7 +85,7 @@
 
 ## day01
 
-[day01笔记](./notebook/01_javase/day01/index.md)
+[day01笔记](./notebook/01_Javase/day01/index.md)
 
 目录如下：
 
@@ -113,7 +113,7 @@ IDEA
 
 ## day02
 
-[day02笔记](./notebook/01_javase/day02/index.md)
+[day02笔记](./notebook/01_Javase/day02/index.md)
 
 目录如下：
 
@@ -131,7 +131,7 @@ package包
 
 ## day03
 
-[day03笔记](./notebook/01_javase/day03/index.md)
+[day03笔记](./notebook/01_Javase/day03/index.md)
 
 目录如下：
 
@@ -152,7 +152,7 @@ if语句
 
 ## day04
 
-[day04笔记](./notebook/01_javase/day04/index.md)
+[day04笔记](./notebook/01_Javase/day04/index.md)
 
 目录如下：
 
@@ -169,7 +169,7 @@ Random随机数
 
 ## day05
 
-[day05笔记](./notebook/01_javase/day05/index.md)
+[day05笔记](./notebook/01_Javase/day05/index.md)
 
 目录如下：
 
@@ -180,7 +180,7 @@ Random随机数
 
 ## day06
 
-[day06笔记](./notebook/01_javase/day06/index.md)
+[day06笔记](./notebook/01_Javase/day06/index.md)
 
 目录如下：
 
@@ -188,7 +188,7 @@ Random随机数
 
 ## day07
 
-[day07笔记](./notebook/01_javase/day07/index.md)
+[day07笔记](./notebook/01_Javase/day07/index.md)
 
 目录如下：
 
@@ -198,7 +198,7 @@ Random随机数
 
 ## day08
 
-[day08笔记](./notebook/01_javase/day08/index.md)
+[day08笔记](./notebook/01_Javase/day08/index.md)
 
 目录如下：
 
@@ -214,7 +214,7 @@ this关键字
 
 ## day09
 
-[day09笔记](./notebook/01_javase/day09/index.md) 
+[day09笔记](./notebook/01_Javase/day09/index.md) 
 
 目录如下：
 
@@ -224,7 +224,7 @@ this关键字
 
 ## day10
 
-[day10笔记](./notebook/01_javase/day10/index.md) 
+[day10笔记](./notebook/01_Javase/day10/index.md) 
 
 目录如下：
 
@@ -436,7 +436,7 @@ MySQL部分，有空可以把代码的空出来看注释练习。这部分有些
 
 ## day1
 
-[day1笔记](./notebook/03_javaweb/day01/index.md) 
+[day1笔记](./notebook/03_Javaweb/day01/index.md) 
 
 目录如下
 
@@ -450,7 +450,7 @@ DML数据的增删攻
 
 ## day2
 
-[day2笔记](./notebook/03_javaweb/day02/index.md) 
+[day2笔记](./notebook/03_Javaweb/day02/index.md) 
 
 目录如下
 
@@ -462,7 +462,7 @@ MySQL高级
 
 ## day3
 
-[day3笔记](./notebook/03_javaweb/day03/index.md) 
+[day3笔记](./notebook/03_Javaweb/day03/index.md) 
 
 目录如下
 
@@ -473,7 +473,7 @@ JDBC体验
 
 ## day4
 
-[day4笔记](./notebook/03_javaweb/day04/index.md) 
+[day4笔记](./notebook/03_Javaweb/day04/index.md) 
 
 目录如下
 
@@ -495,7 +495,7 @@ MyBatis入门
 
 ## day1
 
-[day1笔记](./notebook/04_javaframework/day01/index.md) 
+[day1笔记](./notebook/04_Javaframework/day01/index.md) 
 
 目录如下
 
