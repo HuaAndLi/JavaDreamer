@@ -2011,6 +2011,98 @@ dp[i] = max(dp[i-1]+nums[i],nums[i])
 
 
 
+## [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)
+
+### 问题
+
+给你两个单词 `word1` 和 `word2`， *请返回将 `word1` 转换成 `word2` 所使用的最少操作数* 。
+
+你可以对一个单词进行如下三种操作：
+
+- 插入一个字符
+- 删除一个字符
+- 替换一个字符
+
+ 
+
+**示例 1：**
+
+```
+输入：word1 = "horse", word2 = "ros"
+输出：3
+解释：
+horse -> rorse (将 'h' 替换为 'r')
+rorse -> rose (删除 'r')
+rose -> ros (删除 'e')
+```
+
+**示例 2：**
+
+```
+输入：word1 = "intention", word2 = "execution"
+输出：5
+解释：
+intention -> inention (删除 't')
+inention -> enention (将 'i' 替换为 'e')
+enention -> exention (将 'n' 替换为 'x')
+exention -> exection (将 'n' 替换为 'c')
+exection -> execution (插入 'u')
+```
+
+ 
+
+**提示：**
+
+- `0 <= word1.length, word2.length <= 500`
+- `word1` 和 `word2` 由小写英文字母组成
+
+### 答案
+
+**思路**
+
+不会，看官网解析。
+
+**代码实现**
+
+```java
+    public int minDistance(String word1, String word2) {
+        int m = word1.length();//记录长度
+        int n = word2.length();
+        if (m == 0) {//如果有个为空串，自己返回另一个长度
+            return n;
+        }
+        if (n == 0) {
+            return m;
+        }
+        int[][] dp = new int[m + 1][n + 1];//这里注意要有空串的位置，所以要+1
+        for (int i = 1; i < n + 1; i++) {//初始化第一行
+            dp[0][i] = dp[0][i - 1] + 1;
+        }
+        for (int i = 1; i < m + 1; i++) {//初始化第一列
+            dp[i][0] = dp[i - 1][0] + 1;
+        }
+        for (int i = 1; i < m + 1; i++) {//从第2行开始
+            for (int j = 1; j < n + 1; j++) {//从第2列开始
+                //判断当前是否，注意这里下标需要-1，因为i和j 0下标代表空串
+                if (word1.charAt(i-1) == word2.charAt(j-1)) {
+                    //相同，上次的操作数，不需要做操作
+                    dp[i][j] = dp[i - 1][j - 1];
+                } else {
+                    //不相同，选一个最小的，删除增加替换选个最小的
+                    //i-1，j-1 替换
+                    //i-1，j 增加
+                    //i，j-1 删除
+                    dp[i][j] = Math.min(Math.min(dp[i - 1][j - 1], dp[i - 1][j]), dp[i][j - 1]) + 1;
+                }
+            }
+        }
+
+        return dp[m][n];
+    }
+```
+
+
+
 
 
 
