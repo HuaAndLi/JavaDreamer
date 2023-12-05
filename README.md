@@ -444,6 +444,8 @@ XPath
 
 MySQL部分，有空可以把代码的空出来看注释练习。这部分有些内容源码过多，后面只列出知识点目录，需要源码的同学可以私聊我。
 
+由于时间紧张，等作者有空会进行补充。
+
 ## day01
 
 [day01笔记](./notebook/03_Javaweb/day01/index.md) 
@@ -542,6 +544,21 @@ JavaScript
 [day09笔记](./notebook/03_Javaweb/day09/index.md) 
 
 目录如下：
+
+简介
+HTTP
+Web服务器-Tomcat
+Servlet
+
+## day10
+
+[day10笔记](./notebook/03_Javaweb/day10/index.md) 
+
+目录如下：
+
+简介
+Request
+Response
 
 
 
