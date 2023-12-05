@@ -95,7 +95,7 @@ Java基础开始按照顺序学习。
 
 ## day01
 
-[day01笔记](./notebook/01_Javase/day01/index.md)
+[day01笔记](./notebook/01_javase/day01/index.md)
 
 目录如下：
 
@@ -123,7 +123,7 @@ IDEA
 
 ## day02
 
-[day02笔记](./notebook/01_Javase/day02/index.md)
+[day02笔记](./notebook/01_javase/day02/index.md)
 
 目录如下：
 
@@ -141,7 +141,7 @@ package包
 
 ## day03
 
-[day03笔记](./notebook/01_Javase/day03/index.md)
+[day03笔记](./notebook/01_javase/day03/index.md)
 
 目录如下：
 
@@ -162,7 +162,7 @@ if语句
 
 ## day04
 
-[day04笔记](./notebook/01_Javase/day04/index.md)
+[day04笔记](./notebook/01_javase/day04/index.md)
 
 目录如下：
 
@@ -179,7 +179,7 @@ Random随机数
 
 ## day05
 
-[day05笔记](./notebook/01_Javase/day05/index.md)
+[day05笔记](./notebook/01_javase/day05/index.md)
 
 目录如下：
 
@@ -190,7 +190,7 @@ Random随机数
 
 ## day06
 
-[day06笔记](./notebook/01_Javase/day06/index.md)
+[day06笔记](./notebook/01_javase/day06/index.md)
 
 目录如下：
 
@@ -198,7 +198,7 @@ Random随机数
 
 ## day07
 
-[day07笔记](./notebook/01_Javase/day07/index.md)
+[day07笔记](./notebook/01_javase/day07/index.md)
 
 目录如下：
 
@@ -208,7 +208,7 @@ Random随机数
 
 ## day08
 
-[day08笔记](./notebook/01_Javase/day08/index.md)
+[day08笔记](./notebook/01_javase/day08/index.md)
 
 目录如下：
 
@@ -224,7 +224,7 @@ this关键字
 
 ## day09
 
-[day09笔记](./notebook/01_Javase/day09/index.md) 
+[day09笔记](./notebook/01_javase/day09/index.md) 
 
 目录如下：
 
@@ -234,7 +234,7 @@ this关键字
 
 ## day10
 
-[day10笔记](./notebook/01_Javase/day10/index.md) 
+[day10笔记](./notebook/01_javase/day10/index.md) 
 
 目录如下：
 
