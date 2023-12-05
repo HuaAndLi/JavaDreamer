@@ -596,7 +596,7 @@ bean的生命周期
 
 # 贡献
 
-- 2023.12.05 感谢[徐sir](https://github.com/royxu1972) 发现Java基础下的路径转向错误，已经更正:thumbsup:
+- 2023.12.05 感谢[徐sir](https://github.com/royxu1972) 发现Java基础下的路径转向错误，已经更正 :thumbsup:  
 
 
 
