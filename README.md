@@ -599,9 +599,27 @@ Axios
 
 目录如下：
 
+简介
+JSON
+Vue
 
+## day15
 
+[day15笔记](./notebook/03_Javaweb/day15/index.md) 
 
+目录如下：
+
+简介
+Element
+
+## day16
+
+[day16笔记](./notebook/03_Javaweb/day16/index.md) 
+
+目录如下：
+
+简介
+综合案例
 
 
 
@@ -619,6 +637,10 @@ IoC入门案例(XML版)
 DI入门案例(XML版)
 bean的作用范围
 bean的生命周期
+
+
+
+
 
 # 分布式微服务等框架
 
