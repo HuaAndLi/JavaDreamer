@@ -49,7 +49,13 @@ Java基础开始按照顺序学习。
 
 笔记：[动态规划LeetCode](./notebook/algorithm/study_module/dynamic-programming-leetcode/index.md)
 
+### 回溯法
 
+这个感觉也很难，所以重点刷
+
+网站链接: [题库 - 力扣 (LeetCode) 全球极客挚爱的技术成长平台](https://leetcode.cn/problemset/?topicSlugs=backtracking&page=1&difficulty=EASY)
+
+笔记：[回溯法LeetCode](./notebook/algorithm/study_module/backtracking-leetcode/index.md)
 
 
 
@@ -635,6 +641,19 @@ IoC入门案例(XML版)
 DI入门案例(XML版)
 bean的作用范围
 bean的生命周期
+
+## day02
+
+[day02笔记](./notebook/04_Javaframework/day02/index.md) 
+
+目录如下
+
+简介
+注解开发oc(重点)
+整合MyBatis
+整合JUnit
+
+
 
 
 
