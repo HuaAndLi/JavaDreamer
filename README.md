@@ -633,7 +633,7 @@ Element
 
 [day01笔记](./notebook/04_Javaframework/day01/index.md) 
 
-目录如下
+目录如下：
 
 简介
 Spring
@@ -646,12 +646,24 @@ bean的生命周期
 
 [day02笔记](./notebook/04_Javaframework/day02/index.md) 
 
-目录如下
+目录如下：
 
 简介
-注解开发oc(重点)
+注解开发ioc(重点)
 整合MyBatis
 整合JUnit
+
+## day03
+
+[day03笔记](./notebook/04_Javaframework/day03/index.md) 
+
+目录如下：
+
+简介
+AOP
+Spring事务
+
+
 
 
 
