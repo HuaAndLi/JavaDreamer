@@ -663,9 +663,45 @@ bean的生命周期
 AOP
 Spring事务
 
+## day04
 
+[day04笔记](./notebook/04_Javaframework/day04/index.md) 
 
+目录如下：
 
+简介
+SpringMVC
+Postman
+RestFul
+
+## day05
+
+[day05笔记](./notebook/04_Javaframework/day05/index.md) 
+
+目录如下：
+
+简介
+拦截器
+SSM整合
+
+## day06
+
+[day06笔记](./notebook/04_Javaframework/day06/index.md) 
+
+目录如下：
+
+简介
+lombok
+Maven高级
+私服
+依赖关系
+分模块
+
+## day07
+
+[day07笔记](./notebook/04_Javaframework/day07/index.md) 
+
+目录如下：
 
 
 
