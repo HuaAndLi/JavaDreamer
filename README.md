@@ -747,9 +747,9 @@ git
 
 - ptg : 根据class已有的属性，快速生成JavaBean
 - MybatisX : 快速跳转对应的Mapper接口和xml文件
-- JavaToWeb: 将普通的Maven项目转为Web结构下的Maven项目
+- JBLJavaToWeb: 将普通的Maven项目转为Web结构下的Maven项目
 
-
+- JBLSpringBootAppGen：在使用SpringBoot项目的时候都需要创建启动引导类Application； 使用该插件可以右击项目快速创建启动引导类Application类内容。
 
 
 
