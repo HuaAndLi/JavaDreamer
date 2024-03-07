@@ -731,7 +731,9 @@ git
 
 
 
+## Spring Cloud
 
+....
 
 
 
@@ -750,6 +752,11 @@ git
 - JBLJavaToWeb: 将普通的Maven项目转为Web结构下的Maven项目
 
 - JBLSpringBootAppGen：在使用SpringBoot项目的时候都需要创建启动引导类Application； 使用该插件可以右击项目快速创建启动引导类Application类内容。
+
+- Maven Helper: 方便查看版本冲突
+
+- GenerateAllSetters一键调用一个对象的所有的set方法,get方法等，在方法上生成两个对象的转换
+
 
 
 
