@@ -755,7 +755,9 @@ git
 
 - Maven Helper: 方便查看版本冲突
 
-- GenerateAllSetters一键调用一个对象的所有的set方法,get方法等，在方法上生成两个对象的转换
+- GenerateAllSetters：一键调用一个对象的所有的set方法,get方法等，在方法上生成两个对象的转换
+
+- Tabnine ：AI assistant for software developers
 
 
 
