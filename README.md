@@ -759,6 +759,12 @@ git
 
 - Tabnine ：AI assistant for software developers
 
+- SonarLint：分析代码优化代码
+
+- Translation： 翻译软件
+
+- jclasslib：查看.class源码
+
 
 
 
