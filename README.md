@@ -765,6 +765,8 @@ git
 
 - jclasslib：查看.class源码
 
+- Grep Console：日志过滤插件
+
 
 
 
